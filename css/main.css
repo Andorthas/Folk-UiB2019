@@ -29,15 +29,15 @@ body {
 }
 
 .overview-container {
-    
+
 }
 
 .details-container {
-    
+
 }
 
 .compare-container {
-    
+
 }
 
 /* -------------- BUTTONS --------------- */
@@ -96,7 +96,5 @@ footer {
     text-transform: uppercase;
     margin: 0;
     padding: 0;
-    position: absolute;
-    bottom: 0;
     width: 100%;
 }

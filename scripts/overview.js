@@ -9,34 +9,24 @@ function visData(data) {
   oversikt.innerHTML = "";
 
   var list = document.createElement("ol");
-  var list2 = document.createElement("ol");
-  var list3 = document.createElement("ol");
-  var list4 = document.createElement("ol");
+
   for (item in data.elementer) {
     var info = item;//data.elementer[item].kommunenummer
     var info2 = data.elementer[item].kommunenummer;
     var info3 = data.elementer[item];
     var info4 = antallMenn;
     var lisElt = document.createElement("li");
-    var lisElt2 = document.createElement("li");
-    var lisElt3 = document.createElement("li");
-    var lisElt4 = document.createElement("li");
-    lisElt.innerHTML = info;
-    lisElt2.innerHTML = info2;
-    lisElt3.innerHTML = verdi;
-    lisElt4.innerHTML = info4;
+
+
+    var tekst = item + "   Kommunenummer: " + data.elementer[item].kommunenummer + "     Antall Kvinner: " +  data.elementer[item].Kvinner["2018"] + "    Antall Menn: " + data.elementer[item].Menn["2018"];
+    lisElt.innerHTML = tekst;
+
     list.appendChild(lisElt);
-    list2.appendChild(lisElt2);
-    list3.appendChild(lisElt3);
-    list4.appendChild(lisElt4);
-    //console.log(verdi);
-    //console.log(info3.Menn);
-    //console.log(antallMenn);
 
 
     for (c in info3) {
       var måling = info3[c];
-      //console.log(måling);
+
       for (kvinne in måling) {
         var verdi = måling[kvinne];
       }
@@ -48,22 +38,8 @@ function visData(data) {
 
 
 
-
-
-
-
-
-    //res.value = res.value + data[item].eierskap;
-    //console.log(item);
-    //console.log(data.elementer[item].kommunenummer);
-
-
-
   }
   oversikt.appendChild(list);
-  oversikt.appendChild(list2);
-  oversikt.appendChild(list3);
-  oversikt.appendChild(list4);
 }
 
 
