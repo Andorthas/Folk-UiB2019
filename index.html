@@ -39,6 +39,27 @@
       <div id="Details" class="details-container tab" style="display:none">
           <h2>Detaljer</h2>
           <p>Når dere viser detaljer skal dere i utgangspunktet vise ingen informasjon, men brukeren skal ha mulighet til å skrive inn et kommunenummer.</p>
+
+          <input type="text" value="" id="detaljer">
+          <input type="button" value="Last inn" onclick="showDetails();">
+
+          <div>
+            <ul>
+              <li>
+                Kommune: <span id="komNavn"></span>
+              </li>
+              <li>
+                Kommunenummer: <span id="komNr"></span>
+              </li>
+              <li>
+                Antall Kvinner i 2018: <span id="kvinner"></span>
+              </li>
+              <li>
+                Antall Menn i 2018: <span id"menn"></span>
+            </ul>
+          </div>
+
+          </div>
       </div>
 
       <div id="Compare" class="compare-container tab" style="display:none">
