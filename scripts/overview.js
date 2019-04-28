@@ -2,14 +2,16 @@ var befolkning = "http://wildboy.uib.no/~tpe056/folk/104857.json"
 
 function visData(data) {
   var oversikt = document.getElementById("Overview");
-  oversikt.innerHTML = "";
+  oversikt.innerHTML = '<span class="overview-title">Oversikt</span>';
 
-  var list = document.createElement("ol");
+  var list = document.createElement("ul");
+  list.classList.add('whole-list');
 
   for (item in data.elementer) {
     var lisElt = document.createElement("li");
+    lisElt.classList.add('kommune-section');
 
-    var tekst = item + "   Kommunenummer: " + data.elementer[item].kommunenummer + "     Antall Kvinner: " +  data.elementer[item].Kvinner["2018"] + "    Antall Menn: " + data.elementer[item].Menn["2018"];
+    var tekst = '<span class="kommune-title">Kommune: </span>' + item + '<span class="kommune-spacing"> Kommunenummer: </span>' + data.elementer[item].kommunenummer + '<span class="kommune-spacing"> Antall Kvinner: </span>' +  data.elementer[item].Kvinner["2018"] + '<span class="kommune-spacing"> Antall Menn: </span>' + data.elementer[item].Menn["2018"];
     lisElt.innerHTML = tekst;
 
     list.appendChild(lisElt);
