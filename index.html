@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Our Personal JS -->
     <script type="text/javascript" src="scripts/script.js"></script>
-    <script type="text/javascript" src="scripts/overview.js"></script>
 </head>
 <body>
 
@@ -58,16 +57,25 @@
         </div>
 
         <div id="Overview" class="overview-container tab" style="display:none">
-            
+            <table id="table">
+              <tbody>
+                <tr><th>Kommune</th><th>Kommunenummer</th><th>Befolkning (Begge Kjønn)</th></tr>
+              </tbody>
+            </table>
         </div>
 
         <div id="Details" class="details-container tab" style="display:none">
           <h2>Detaljer</h2>
           <p>Vennligst fyll inn et kommunenummer:</p>
 
-          <div class="search-container">
-            <input class="input-field" type="text" placeholder="Søk...">
-            <input class="search-button" type="button" value="Søk" onclick="showDetails();">
+          <div id="searchBar">
+            <div>
+              <input id="searchInput" type="text" placeholder="Søk...">
+              <button class="search-button" onclick="search()">Søk</button>
+            </div>
+            <div id="textareaInfo">
+
+            </div>
           </div>
         </div>
       

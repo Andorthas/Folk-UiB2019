@@ -83,59 +83,57 @@ a {
     color: red;
 }
 
+
 /* -------------- OVERVIEW --------------- */
 
-.whole-list {
-    margin: 0;
-    padding: 0;
+table {
+    border-collapse: collapse;
+    border: 1px solid #DDD;
+    margin: 0 auto;
+    font-size: 1rem;
 }
 
-.overview-title {
-    font-size: 1.5rem;
-    font-weight: bold;
+th {
+    background-color: #292826;
+    color: white;
+    border: 1px solid #DDD;
 }
 
-.kommune-section {
-    border-bottom: 2px solid #292826;
-    padding: 2rem 0 2rem 0;
-    list-style: none;
+th, td {
+    padding: 2px 15px;
+    text-align: center;
 }
 
-.kommune-title {
-    font-weight: bold;
-    margin-right: 1rem;
-}
-
-.kommune-spacing {
-    font-weight: bold;
-    margin-left: 1rem;
-    margin-right: 1rem;
+td {
+    border: 1px solid #DDD;
+    border-top: 0;
 }
 
 /* -------------- DETAILS --------------- */
 
-.input-field {
-    width: 50%;
-    height: 1.8rem;
+#searchInput {
     padding: 1rem;
+    width: 10%;
     font-size: 1.5rem;
-    border: 2px solid #292826;
     outline: none;
+    border: 1px solid #292826;
 }
 
 .search-button {
-    width: 7rem;
-    height: 4.05rem;
+    padding: 1rem;
     font-size: 1.5rem;
-    border: none;
-    border: 2px solid #292826;
+    border: 1px solid #292826;
     transition: ease-in-out .2s;
-    cursor: pointer;
 }
 
 .search-button:hover {
     background-color: #F9D342;
     transition: ease-in-out .2s;
+}
+
+#textareaInfo {
+    height: 511px;
+    width: 100%;
 }
 
 
@@ -155,3 +153,14 @@ footer {
     padding: 0;
     width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
