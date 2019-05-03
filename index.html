@@ -57,26 +57,49 @@
         </div>
 
         <div id="Overview" class="overview-container tab" style="display:none">
-            <table id="table">
-              <tbody>
-                <tr><th>Kommune</th><th>Kommunenummer</th><th>Befolkning (Begge Kjønn)</th></tr>
-              </tbody>
-            </table>
+          <h2 id="title-overview">Oversikt over alle<span id="antall-kommuner">423</span>kommunene:</h2>
+          <table id="table">
+            <tbody>
+              <tr>
+                <th>Kommune</th>
+                <th>Kommunenummer</th>
+                <th>Befolkning (Begge Kjønn)</th>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <div id="Details" class="details-container tab" style="display:none">
-          <h2>Detaljer</h2>
-          <p>Vennligst fyll inn et kommunenummer:</p>
-
+          <h2 id="title-search">Hva leter du etter?</h2>
+          <p>Vennligst fyll inn et kommunenummer (Eksempel: "0101" eller "0104")</p>
+  
           <div id="searchBar">
             <div>
               <input id="searchInput" type="text" placeholder="Søk...">
               <button class="search-button" onclick="search()">Søk</button>
             </div>
-            <div id="textareaInfo">
-
-            </div>
           </div>
+          <div id="searchMessage">
+
+          </div>
+
+          
+          <table id="searchTable" style="display:none">
+            <thead>
+              <tr>
+                <th>Kommune</th>
+                <th>Kommunenummer</th>
+                <th>Årstall</th>
+                <th>Menn</th>
+                <th>Kvinner</th>
+              </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+
+          </table>
+          <div id="empty-box"></div>
         </div>
       
 
