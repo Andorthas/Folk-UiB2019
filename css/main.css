@@ -40,11 +40,14 @@ a {
 
 .header-button {
     padding: 1rem;
+    padding-top: 3.5rem;
     outline: none;
     border: none;
     cursor: pointer;
     font-size: 1rem;
+    font-weight: bold;
     text-transform: uppercase;
+    height: 90px;
     color: #292826;
     letter-spacing: .03rem;
     border-right: 2px solid #292826;
@@ -64,6 +67,34 @@ a {
 
 .right-button {
     border-radius: 0 10px 0 0;
+}
+
+.intro-icon-background {
+    background-image: url("../images/information-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 1.8rem;
+    background-position: 50% 20%;
+}
+
+.overview-icon-background {
+    background-image: url("../images/overview-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 1.8rem;
+    background-position: 50% 20%;
+}
+
+.search-icon-background {
+    background-image: url("../images/search-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 1.8rem;
+    background-position: 50% 20%;
+}
+
+.compare-icon-background {
+    background-image: url("../images/compare-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 1.8rem;
+    background-position: 50% 20%;
 }
 
 /* -------------- MAIN CONTENT --------------- */
@@ -144,7 +175,7 @@ tr:nth-child(even) {
 }
 
 .search-button {
-    background-image: url("../images/musica-searcher.svg");
+    background-image: url("../images/search-icon.svg");
     background-repeat: no-repeat;
     background-size: 2rem;
     background-position: 50% 50%;
