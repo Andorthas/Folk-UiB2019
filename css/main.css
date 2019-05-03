@@ -162,7 +162,8 @@ tr:nth-child(even) {
 }
 
 .search-button:hover {
-    background-color: #F9D342;
+    background-color: white;
+    box-shadow: 5px 5px 15px 5px #DDD;
     transition: ease-in-out .2s;
 }
 
