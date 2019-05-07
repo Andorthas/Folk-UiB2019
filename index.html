@@ -15,11 +15,11 @@
       <!-- -------------- NAVIGATION --------------- -->
 
       <div class="header-container">
-        <button class="header-button intro-icon-background left-button tablink active-button" onclick="changeTab(event,'Introduction')">Introduksjon</button>
-        <button class="header-button overview-icon-background tablink" onclick="changeTab(event,'Overview')">Oversikt</button>
-        <button class="header-button search-icon-background tablink" onclick="changeTab(event,'Details')">Detaljer</button>
-        <button class="header-button compare-icon-background right-button tablink" onclick="changeTab(event,'Compare')">Sammenligning</button>
-    </div>
+          <button class="header-button intro-icon-background left-button tablink active-button" onclick="changeTab(event,'Introduction')">Introduksjon</button>
+          <button class="header-button overview-icon-background tablink" onclick="changeTab(event,'Overview')">Oversikt</button>
+          <button class="header-button search-icon-background tablink" onclick="changeTab(event,'Details')">Detaljer</button>
+          <button class="header-button compare-icon-background right-button tablink" onclick="changeTab(event,'Compare')">Sammenligning</button>
+      </div>
 
       <!-- -------------- MAIN CONTENT --------------- -->
       <div class="main-container">
@@ -32,9 +32,9 @@
             </div>
 
             <div class="ssb"><h3>SSB - Statistisk Sentralbyrå</h3>
-            <p>Befolkning - <a href="http://data.ssb.no/api/v0/dataset/104857?lang=no">http://data.ssb.no/api/v0/dataset/104857?lang=no</a></p>
-            <p>Sysselsatte - <a href="http://data.ssb.no/api/v0/dataset/100145?lang=no">http://data.ssb.no/api/v0/dataset/100145?lang=no</a></p>
-            <p>Utdanning - <a href="http://data.ssb.no/api/v0/dataset/85432?lang=no">http://data.ssb.no/api/v0/dataset/85432?lang=no</a></p>
+            <h4>Befolkning</h4><a href="http://data.ssb.no/api/v0/dataset/104857?lang=no">http://data.ssb.no/api/v0/dataset/104857?lang=no</a>
+            <h4>Sysselsatte</h4><a href="http://data.ssb.no/api/v0/dataset/100145?lang=no">http://data.ssb.no/api/v0/dataset/100145?lang=no</a></p>
+            <h4>Utdanning</h4><a href="http://data.ssb.no/api/v0/dataset/85432?lang=no">http://data.ssb.no/api/v0/dataset/85432?lang=no</a></p>
             <p class="important-message">OBS! DATAENE KAN INNEHOLDE FEIL!</p>
             </div>
 
@@ -104,8 +104,48 @@
       
 
         <div id="Compare" class="compare-container tab" style="display:none">
-            <h2>Sammenligning</h2>
-            <p>Som i detaljer skal dere i utgangspunktet ikke vise noen informasjon her, men brukeren skal kunne skrive inn to gyldige kommunenummer.</p>
+          <h2 id="title-search">Vil du jeg skal sammenligne kommuner for deg?</h2>
+          <p>Vennligst fyll inn to kommunenummer (Eksempel: "0101" og "0104")</p>
+  
+          <div class="flex-container">
+          <div id="compareBar">
+            <div>
+              <input id="compareInput" type="text" placeholder="Første kommune...">
+              
+            </div>
+          </div>
+          <div id="compareMessage">
+
+          </div>
+
+          <div id="compareBar">
+            <div>
+              <input id="compareInput" type="text" placeholder="Andre kommune...">
+            </div>
+          </div>
+          <div id="compareMessage">
+
+          </div>
+          <button class="compare-button" onclick="search()"></button>
+        </div>
+
+          
+          <table id="searchTable" style="display:none">
+            <thead>
+              <tr>
+                <th>Kommune</th>
+                <th>Kommunenummer</th>
+                <th>Årstall</th>
+                <th>Menn</th>
+                <th>Kvinner</th>
+              </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+
+          </table>
+          <div id="compare-empty-box"></div>
         </div>
 
       </div>

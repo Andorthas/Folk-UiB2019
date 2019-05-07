@@ -52,6 +52,7 @@ a {
     border-right: 2px solid #051e3e;
     border-bottom: 2px solid #051e3e;
     transition: ease-in-out .2s;
+    
 }
 
 .header-button:hover {
@@ -188,10 +189,11 @@ tr:nth-child(even) {
     height: 70px;
     width: 70px;
     margin-top: 1rem;
+    cursor: pointer;
 }
 
 .search-button:hover {
-    background-color: #DDD;
+    background-color: white;
     box-shadow: 5px 5px 15px 5px #DDD;
     transition: ease-in-out .2s;
 }
@@ -232,6 +234,63 @@ tr:nth-child(even) {
     text-align: center;
 }
 
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.compare-button {
+    background-image: url("../images/search-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    background-position: 50% 50%;
+    background-color: #F9D342;
+    box-shadow: 5px 5px 15px 5px #DDD;
+    padding: 1.6rem;
+    font-size: 1.5rem;
+    transition: ease-in-out .2s;
+    border-radius: 24px;
+    border: none;
+    margin-left: 1rem;
+    height: 70px;
+    width: 70px;
+    margin-top: .6rem;
+    cursor: pointer;
+}
+
+.compare-button:hover {
+    background-color: white;
+    box-shadow: 5px 5px 15px 5px #DDD;
+    transition: ease-in-out .2s;
+}
+
+
+
+#compareInput {
+    padding: 1rem;
+    width: 80%;
+    font-size: 1.3rem;
+    outline: none;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    border-radius: 24px;
+    box-shadow: 5px 5px 15px 5px #DDD;
+    border: none;
+}
+
+#compareMessage {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: red;
+}
+
+#compare-empty-box {
+    height: 399px;
+}
+
+
+
 
 /* -------------- FOOTER --------------- */
 
@@ -250,7 +309,83 @@ footer {
     width: 100%;
 }
 
+/* -------------- MOBILE and TABLET --------------- */
 
+@media only screen and (max-width: 600px) {
+    .main-container {
+        width: 75%;
+        text-align: center;
+    }
+
+    a {
+        font-size: .9rem;
+    }
+
+    .header-container {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: transparent;
+      padding: 0;
+      margin-bottom: 3rem;
+    }
+
+    .header-button {
+        border: none;
+        border-bottom: 1px solid black;
+        border-radius: 0 0 0 0;
+        height: 30px;
+        width: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-size: 1.5rem;
+        background-position: 80%;
+    }
+
+    #overview {
+        text-align: center;
+    }
+
+    #title-overview {
+        font-size: .90rem;
+    }
+
+    #searchInput {
+        font-size: 1rem;
+    }
+
+    table {
+        margin: 0 auto;
+        font-size: .5rem;
+    }
+    
+    
+    th, td {
+        padding: 0 2px;
+        text-align: center;
+    }
+    
+    footer {
+        width: 100%;
+        font-size: .75rem;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .compare-button {
+        width: 90%;
+    }
+
+    #compareInput {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+  }
 
 
 
