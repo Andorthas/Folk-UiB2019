@@ -16,7 +16,7 @@ function changeTab(event, tabName) {
 
 /*---------------- KONSTRUKTØR --------------- */
 
-function Grensesnitt(url) {
+function Grensesnitt(url, onload) {
 	if (this instanceof Grensesnitt) {
 		if (url) {
 			if (typeof url == "string") {
@@ -28,6 +28,9 @@ function Grensesnitt(url) {
 					request.send(null);
 					if (request.status == 200 && request.readyState == 4) {
 						this.data = JSON.parse(request.responseText);
+						if(onload) {
+							onload();
+						}
 					} else {
 						throw "Forespørselen funket ikke";
 					}
@@ -108,9 +111,9 @@ var sysselsetting_g;
 var utdanning_g;
 
 window.onload = function() {
-	befolkning_g = new Grensesnitt("http://wildboy.uib.no/~tpe056/folk/104857.json");
-	sysselsetting_g = new Grensesnitt("http://wildboy.uib.no/~tpe056/folk/100145.json");
-  utdanning_g = new Grensesnitt("http://wildboy.uib.no/~tpe056/folk/85432.json");
+	befolkning_g = new Grensesnitt("http://wildboy.uib.no/~tpe056/folk/104857.json", function() {sysselsetting_g.load()});
+	sysselsetting_g = new Grensesnitt("http://wildboy.uib.no/~tpe056/folk/100145.json", function() {utdanning_g.load()});
+  utdanning_g = new Grensesnitt("http://wildboy.uib.no/~tpe056/folk/85432.json", function() {} );
   
 	befolkning_g.load();
 	sysselsetting_g.load();
@@ -144,8 +147,8 @@ function search() {
 		return;
 	}
   var data = befolkning_g.getInfo(id);
-	// var result1 = sysselsetting_g.getInfo(id);
-	// var result2 = utdanning_g.getInfo(id);
+	 //var result1 = sysselsetting_g.getInfo(id);
+	 //var result2 = utdanning_g.getInfo(id);
 
 	if(data){
 		document.getElementById("searchMessage").innerText = "";
