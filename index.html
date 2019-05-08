@@ -47,6 +47,7 @@
         <h4>Utdanning</h4><a
           href="http://data.ssb.no/api/v0/dataset/85432?lang=no">http://data.ssb.no/api/v0/dataset/85432?lang=no</a></p>
         <p class="important-message">OBS! DATAENE KAN INNEHOLDE FEIL!</p>
+        <p class="importantTableInfo">ALLE TABELLENE PÅ DENNE SIDEN KAN SIDE-SCROLLES PÅ MOBIL-ENHETER!</p>
       </div>
 
       <h3>Introduksjon</h3>
@@ -54,22 +55,22 @@
         vi henter dataen fra og en liten notis om at dataene kan inneholde feil.</p>
 
       <h3>Oversikt</h3>
-      <p>I denne delen skriver vi ut alle kommunene med navn, kommunenummer og siste måling av total befolkning.</p>
+      <p>I denne delen skriver vi ut alle kommunene med navn, kommunenummer og siste måling av total befolkning.
+        Her er det lagt sammen begge kjønn.
+      </p>
 
       <h3>Detaljer</h3>
       <p>I denne delen skal brukeren ha mulighet til å skrive inn et kommunenummer. Så lenge kommunenummeret er et vi
-        har data på så skal
-        det vises navn, kommunenummer, siste målte befolkning, siste målte statistikk for sysselsetting og høyere
-        utdanning. Det står undefined
-        på utdanning fra 2018 siden det ikke finnes data der. Vi har lagt til tidligere år for å vise historisk
-        utvikling.
+        har data på skal det vises navn, kommunenummer, siste målte befolkning, siste målte statistikk for sysselsetting og høyere
+        utdanning. Det er skrevet en funksjon som gjør at dersom det ikke er noe data der så vil det kun komme ut en strek.
+        Vi har lagt til tidligere år for å vise den historiske utviklingen.
       </p>
 
       <h3>Sammenligning</h3>
       <p>I denne delen skal brukeren kunne skrive inn to gyldige kommunenummer. Da skal det vises data for utvikling av
-        sysselsetting for både menn og kvinner
-        i begge kommunene. For hvert år og for hver kjønnskategori skal det markeres hvilken av kommunene som har høyest
-        vekst i prosentpoeng.
+        sysselsetting for både menn og kvinner i begge kommunene. For hvert år og for hver kjønnskategori skal det markeres hvilken av kommunene som har høyest
+        vekst i prosentpoeng. Det er to tabeller over hverandre som viser dataen. Om det er enten menn eller kvinner som har høyest vekst vil det komme tydelig frem
+        med grønn bakgrunn. Da ser vi klart om det er menn eller kvinner og hvilken kommune det er som har høyest vekst.
       </p>
     </div>
 
@@ -93,13 +94,13 @@
       <p>Vennligst fyll inn et kommunenummer (Eksempel: "0101" eller "0104")</p>
 
 
-      <form class="flex-container" action="#">
+      <div class="flex-container">
         <div id="searchBar">
           <input id="searchInput" type="text" placeholder="Søk...">
         </div>
         <button class="search-button"
           onclick="search(document.getElementById('searchInput').value, 'searchTable')"></button>
-      </form>
+      </div>
 
 
       <div id="searchMessage">
@@ -137,7 +138,7 @@
       <h2 id="title-search">Vil du jeg skal sammenligne kommuner for deg?</h2>
       <p>Vennligst fyll inn to kommunenummer (Eksempel: "1201" og "0104")</p>
 
-      <form class="flex-container" action="#">
+      <div class="flex-container">
         <div id="compareBar">
           <div>
             <input id="compareInput-1" type="text" placeholder="Første kommune...">
@@ -155,7 +156,7 @@
         </div>
         <button class="compare-button"
           onclick="compare('compareInput-1', 'compareTable-1', 'compareInput-2', 'compareTable-2');"></button>
-      </form>
+      </div>
 
       <div class="table-wrapper">
         <table id="compareTable-1" style="display:none">

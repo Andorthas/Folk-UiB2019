@@ -215,21 +215,21 @@ function search(kommuneId, tableId, compareId) {
 			/*---------------- SYSSELSETTING --------------- */
 
 			var syssMennCell = row.insertCell(-1);
-			syssMennCell.innerText = mennSysselsetting[year]
+			syssMennCell.innerText = mennSysselsetting[year] + "%";
 			var syssKvinnerCell = row.insertCell(-1);
-			syssKvinnerCell.innerText = kvinnerSysselsetting[year]
+			syssKvinnerCell.innerText = kvinnerSysselsetting[year] + "%";
 
 			/*---------------- UTDANNING --------------- */
 
 			if (!compareId) {
 				var utdMennKortCell = row.insertCell(-1);
-				utdMennKortCell.innerText = formatCellData(mennUtdanningKort[year]);
+				utdMennKortCell.innerText = formatCellData(mennUtdanningKort[year]) + "%";
 				var utdKvinnerKortCell = row.insertCell(-1);
-				utdKvinnerKortCell.innerText = formatCellData(kvinnerUtdanningKort[year]);
+				utdKvinnerKortCell.innerText = formatCellData(kvinnerUtdanningKort[year]) + "%";
 				var utdMennLangCell = row.insertCell(-1);
-				utdMennLangCell.innerText = formatCellData(mennUtdanningLang[year]);
+				utdMennLangCell.innerText = formatCellData(mennUtdanningLang[year]) + "%";
 				var utdKvinnerLangCell = row.insertCell(-1);
-				utdKvinnerLangCell.innerText = formatCellData(kvinnerUtdanningLang[year]);
+				utdKvinnerLangCell.innerText = formatCellData(kvinnerUtdanningLang[year]) + "%";
 			}
 			if (compareId) {
 				/*---------------- VEKST --------------- */
@@ -291,4 +291,3 @@ function formatCellData(cellData) {
 		return "-";
 	}
 }
-

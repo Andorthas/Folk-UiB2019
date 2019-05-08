@@ -114,6 +114,11 @@ a {
     color: red;
 }
 
+.importantTableInfo {
+    font-weight: bold;
+    color: red;
+}
+
 
 /* -------------- OVERVIEW --------------- */
 
@@ -136,7 +141,7 @@ table {
     border-collapse: collapse;
     border: 1px solid #DDD;
     margin: 0 auto;
-    font-size: .8rem;
+    font-size: 1rem;
     margin-top: 3rem;
 }
 
@@ -222,7 +227,7 @@ tr:nth-child(even) {
 }
 
 #empty-box {
-    height: 373px;
+    height: 401px;
 }
 
 /* -------------- COMPARE --------------- */
@@ -292,13 +297,9 @@ tr:nth-child(even) {
 
 .highest-growth {
     font-weight: bold;
-    color: green;
+    color: white;
+    background-color: #00A700;
 }
-
-
-
-
-
 
 
 /* -------------- FOOTER --------------- */
@@ -411,12 +412,3 @@ footer {
         max-width: 100%;
     }
   }
-
-
-
-
-
-
-
-
-
