@@ -1,166 +1,218 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Folk</title>
-    <!-- Our Personal CSS -->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <!-- Our Personal JS -->
-    <script type="text/javascript" src="scripts/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Folk</title>
+  <!-- Our Personal CSS -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- Our Personal JS -->
+  <script type="text/javascript" src="scripts/script.js"></script>
 </head>
+
 <body>
 
 
-      <!-- -------------- NAVIGATION --------------- -->
+  <!-- -------------- NAVIGATION --------------- -->
 
-      <div class="header-container">
-          <button class="header-button intro-icon-background left-button tablink active-button" onclick="changeTab(event,'Introduction')">Introduksjon</button>
-          <button class="header-button overview-icon-background tablink" onclick="changeTab(event,'Overview')">Oversikt</button>
-          <button class="header-button search-icon-background tablink" onclick="changeTab(event,'Details')">Detaljer</button>
-          <button class="header-button compare-icon-background right-button tablink" onclick="changeTab(event,'Compare')">Sammenligning</button>
+  <div class="header-container">
+    <button class="header-button intro-icon-background left-button tablink active-button"
+      onclick="changeTab(event,'Introduction')">Introduksjon</button>
+    <button class="header-button overview-icon-background tablink"
+      onclick="changeTab(event,'Overview')">Oversikt</button>
+    <button class="header-button search-icon-background tablink" onclick="changeTab(event,'Details')">Detaljer</button>
+    <button class="header-button compare-icon-background right-button tablink"
+      onclick="changeTab(event,'Compare')">Sammenligning</button>
+  </div>
+
+  <!-- -------------- MAIN CONTENT --------------- -->
+  <div class="main-container">
+
+    <div id="Introduction" class="introduction-container tab">
+      <h2>Introduksjon</h2>
+      <div class="divider">
+        <p>Dette er en eksamensbesvarelse i emnet INFO134. Denne oppgaven går ut på å hente ut data om Norges befolkning
+          og vise dette
+          på en strukturert måte.</p>
       </div>
 
-      <!-- -------------- MAIN CONTENT --------------- -->
-      <div class="main-container">
+      <div class="ssb">
+        <h3>SSB - Statistisk Sentralbyrå</h3>
+        <h4>Befolkning</h4><a
+          href="http://data.ssb.no/api/v0/dataset/104857?lang=no">http://data.ssb.no/api/v0/dataset/104857?lang=no</a>
+        <h4>Sysselsatte</h4><a
+          href="http://data.ssb.no/api/v0/dataset/100145?lang=no">http://data.ssb.no/api/v0/dataset/100145?lang=no</a>
+        </p>
+        <h4>Utdanning</h4><a
+          href="http://data.ssb.no/api/v0/dataset/85432?lang=no">http://data.ssb.no/api/v0/dataset/85432?lang=no</a></p>
+        <p class="important-message">OBS! DATAENE KAN INNEHOLDE FEIL!</p>
+      </div>
 
-        <div id="Introduction" class="introduction-container tab">
-            <h2>Introduksjon</h2>
-            <div class="divider">
-            <p>Dette er en eksamensbesvarelse i emnet INFO134. Denne oppgaven går ut på å hente ut data om Norges befolkning og vise dette
-              på en strukturert måte.</p>
-            </div>
+      <h3>Introduksjon</h3>
+      <p>I denne delen blir produktet vårt forklart. Den inneholder også lenker til SSB sine offisielle sider hvor
+        vi henter dataen fra og en liten notis om at dataene kan inneholde feil.</p>
 
-            <div class="ssb"><h3>SSB - Statistisk Sentralbyrå</h3>
-            <h4>Befolkning</h4><a href="http://data.ssb.no/api/v0/dataset/104857?lang=no">http://data.ssb.no/api/v0/dataset/104857?lang=no</a>
-            <h4>Sysselsatte</h4><a href="http://data.ssb.no/api/v0/dataset/100145?lang=no">http://data.ssb.no/api/v0/dataset/100145?lang=no</a></p>
-            <h4>Utdanning</h4><a href="http://data.ssb.no/api/v0/dataset/85432?lang=no">http://data.ssb.no/api/v0/dataset/85432?lang=no</a></p>
-            <p class="important-message">OBS! DATAENE KAN INNEHOLDE FEIL!</p>
-            </div>
+      <h3>Oversikt</h3>
+      <p>I denne delen skriver vi ut alle kommunene med navn, kommunenummer og siste måling av total befolkning.</p>
 
-            <h3>Introduksjon</h3>
-            <p>I denne delen blir produktet vårt forklart. Den inneholder også lenker til SSB sine offisielle sider hvor
-              vi henter dataen fra og en liten notis om at dataene kan inneholde feil.</p>
+      <h3>Detaljer</h3>
+      <p>I denne delen skal brukeren ha mulighet til å skrive inn et kommunenummer. Så lenge kommunenummeret er et vi
+        har data på så skal
+        det vises navn, kommunenummer, siste målte befolkning, siste målte statistikk for sysselsetting og høyere
+        utdanning. Det står undefined
+        på utdanning fra 2018 siden det ikke finnes data der. Vi har lagt til tidligere år for å vise historisk
+        utvikling.
+      </p>
 
-            <h3>Oversikt</h3>
-            <p>I denne delen skriver vi ut alle kommunene med navn, kommunenummer og siste måling av total befolkning.</p>
+      <h3>Sammenligning</h3>
+      <p>I denne delen skal brukeren kunne skrive inn to gyldige kommunenummer. Da skal det vises data for utvikling av
+        sysselsetting for både menn og kvinner
+        i begge kommunene. For hvert år og for hver kjønnskategori skal det markeres hvilken av kommunene som har høyest
+        vekst i prosentpoeng.
+      </p>
+    </div>
 
-            <h3>Detaljer</h3>
-            <p>I denne delen skal brukeren ha mulighet til å skrive inn et kommunenummer. Så lenge kommunenummeret er et vi har data på så skal
-              det vises navn, kommunenummer, siste målte befolkning, siste målte statistikk for sysselsetting og høyere utdanning.
-            </p>
+    <div id="Overview" class="overview-container tab" style="display:none">
+      <h2 id="title-overview">Oversikt over alle<span id="antall-kommuner">423</span>kommunene:</h2>
+      <div class="table-wrapper">
+      <table id="table">
+        <tbody>
+          <tr>
+            <th>Kommune</th>
+            <th>Kommunenummer</th>
+            <th>Befolkning (Begge Kjønn)</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
 
-            <h3>Sammenligning</h3>
-            <p>I denne delen skal brukeren kunne skrive inn to gyldige kommunenummer. Da skal det vises data for utvikling av sysselsetting for både menn og kvinner
-              i begge kommunene. For hvert år og for hver kjønnskategori skal det markeres hvilken av kommunene som har høyest vekst i prosentpoeng.
-            </p>
+    <div id="Details" class="details-container tab" style="display:none">
+      <h2 id="title-search">Hva leter du etter?</h2>
+      <p>Vennligst fyll inn et kommunenummer (Eksempel: "0101" eller "0104")</p>
+
+
+      <form class="flex-container" action="#">
+        <div id="searchBar">
+          <input id="searchInput" type="text" placeholder="Søk...">
         </div>
+        <button class="search-button"
+          onclick="search(document.getElementById('searchInput').value, 'searchTable')"></button>
+      </form>
 
-        <div id="Overview" class="overview-container tab" style="display:none">
-          <h2 id="title-overview">Oversikt over alle<span id="antall-kommuner">423</span>kommunene:</h2>
-          <table id="table">
-            <tbody>
-              <tr>
-                <th>Kommune</th>
-                <th>Kommunenummer</th>
-                <th>Befolkning (Begge Kjønn)</th>
-              </tr>
-            </tbody>
-          </table>
-        </div>
 
-        <div id="Details" class="details-container tab" style="display:none">
-          <h2 id="title-search">Hva leter du etter?</h2>
-          <p>Vennligst fyll inn et kommunenummer (Eksempel: "0101" eller "0104")</p>
-  
-          <div id="searchBar">
-            <div>
-              <input id="searchInput" type="text" placeholder="Søk...">
-              <button class="search-button" onclick="search()"></button>
-            </div>
-          </div>
-          <div id="searchMessage">
-
-          </div>
-
-          
-          <table id="searchTable" style="display:none">
-            <thead>
-              <tr>
-                <th>Kommune</th>
-                <th>Kommunenummer</th>
-                <th>Årstall</th>
-                <th>Menn</th>
-                <th>Kvinner</th>
-              </tr>
-            </thead>
-
-            <tbody>
-            </tbody>
-
-          </table>
-          <div id="empty-box"></div>
-        </div>
-      
-
-        <div id="Compare" class="compare-container tab" style="display:none">
-          <h2 id="title-search">Vil du jeg skal sammenligne kommuner for deg?</h2>
-          <p>Vennligst fyll inn to kommunenummer (Eksempel: "0101" og "0104")</p>
-  
-          <div class="flex-container">
-          <div id="compareBar">
-            <div>
-              <input id="compareInput" type="text" placeholder="Første kommune...">
-              
-            </div>
-          </div>
-          <div id="compareMessage">
-
-          </div>
-
-          <div id="compareBar">
-            <div>
-              <input id="compareInput" type="text" placeholder="Andre kommune...">
-            </div>
-          </div>
-          <div id="compareMessage">
-
-          </div>
-          <button class="compare-button" onclick="search()"></button>
-        </div>
-
-          
-          <table id="searchTable" style="display:none">
-            <thead>
-              <tr>
-                <th>Kommune</th>
-                <th>Kommunenummer</th>
-                <th>Årstall</th>
-                <th>Menn</th>
-                <th>Kvinner</th>
-              </tr>
-            </thead>
-
-            <tbody>
-            </tbody>
-
-          </table>
-          <div id="compare-empty-box"></div>
-        </div>
+      <div id="searchMessage">
 
       </div>
+
+      <div class="table-wrapper">
+      <table id="searchTable" style="display:none">
+        <thead>
+          <tr>
+            <th>Kommune</th>
+            <th>Kommunenummer</th>
+            <th>Årstall</th>
+            <th>Menn</th>
+            <th>Kvinner</th>
+            <th>Sysselsetting Menn</th>
+            <th>Sysselsetting Kvinner</th>
+            <th>Kort Utdanning Menn</th>
+            <th>Kort Utdanning Kvinner</th>
+            <th>Lang Utdanning Menn</th>
+            <th>Lang Utdanning Kvinner</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        </tbody>
+
+      </table>
+    </div>
+      <div id="empty-box"></div>
     </div>
 
 
-      <!-- -------------- FOOTER --------------- -->
+    <div id="Compare" class="compare-container tab" style="display:none">
+      <h2 id="title-search">Vil du jeg skal sammenligne kommuner for deg?</h2>
+      <p>Vennligst fyll inn to kommunenummer (Eksempel: "1201" og "0104")</p>
 
-    <footer>
-        <p>Dette er en eksamensbesvarelse i emnet info134</p>
-    </footer>
+      <form class="flex-container" action="#">
+        <div id="compareBar">
+          <div>
+            <input id="compareInput-1" type="text" placeholder="Første kommune...">
+
+          </div>
+        </div>
+        <div id="compareMessage">
+
+        </div>
+
+        <div id="compareBar">
+          <input id="compareInput-2" type="text" placeholder="Andre kommune...">
+        </div>
+        <div id="compareMessage">
+        </div>
+        <button class="compare-button"
+          onclick="compare('compareInput-1', 'compareTable-1', 'compareInput-2', 'compareTable-2');"></button>
+      </form>
+
+      <div class="table-wrapper">
+        <table id="compareTable-1" style="display:none">
+          <thead>
+            <tr>
+              <th>Kommune</th>
+              <th>Kommunenummer</th>
+              <th>Årstall</th>
+              <th>Sysselsetting Menn</th>
+              <th>Sysselsetting Kvinner</th>
+              <th>Vekst Menn</th>
+              <th>Vekst Kvinner</th>
+            </tr>
+          </thead>
+
+          <tbody>
+          </tbody>
+
+        </table>
+      </div>
+
+      <div class="table-wrapper">
+        <table id="compareTable-2" style="display:none">
+          <thead>
+            <tr>
+              <th>Kommune</th>
+              <th>Kommunenummer</th>
+              <th>Årstall</th>
+              <th>Sysselsetting Menn</th>
+              <th>Sysselsetting Kvinner</th>
+              <th>Vekst Menn</th>
+              <th>Vekst Kvinner</th>
+            </tr>
+          </thead>
+
+          <tbody>
+          </tbody>
+
+        </table>
+      </div>
+      <div id="compare-empty-box"></div>
+    </div>
+
+  </div>
+  </div>
+
+
+  <!-- -------------- FOOTER --------------- -->
+
+  <footer>
+    <p>Dette er en eksamensbesvarelse i emnet info134</p>
+  </footer>
 
 
 
 
 
 </body>
+
 </html>

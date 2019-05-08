@@ -136,7 +136,8 @@ table {
     border-collapse: collapse;
     border: 1px solid #DDD;
     margin: 0 auto;
-    font-size: 1rem;
+    font-size: .8rem;
+    margin-top: 3rem;
 }
 
 th {
@@ -163,11 +164,10 @@ tr:nth-child(even) {
 
 #searchInput {
     padding: 1rem;
-    width: 40%;
+    width: 80%;
     font-size: 1.5rem;
     outline: none;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-top: 1.3rem;
     border-radius: 24px;
     box-shadow: 5px 5px 15px 5px #DDD;
     border: none;
@@ -266,7 +266,8 @@ tr:nth-child(even) {
 
 
 
-#compareInput {
+#compareInput-1,
+#compareInput-2 {
     padding: 1rem;
     width: 80%;
     font-size: 1.3rem;
@@ -288,6 +289,14 @@ tr:nth-child(even) {
 #compare-empty-box {
     height: 399px;
 }
+
+.highest-growth {
+    font-weight: bold;
+    color: green;
+}
+
+
+
 
 
 
@@ -354,11 +363,20 @@ footer {
 
     #searchInput {
         font-size: 1rem;
+        width: 82%;
+        margin-bottom: 3rem;
+    }
+
+    .search-button {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
     }
 
     table {
         margin: 0 auto;
-        font-size: .5rem;
+        font-size: 1rem;
+        margin-bottom: 2rem;
     }
     
     
@@ -379,11 +397,18 @@ footer {
 
     .compare-button {
         width: 90%;
+        margin-bottom: 2rem;
     }
 
-    #compareInput {
+    #compareInput-1,
+    #compareInput-2 {
         font-size: 1rem;
         margin-bottom: 1rem;
+    }
+
+    .table-wrapper {
+        overflow-x: scroll;
+        max-width: 100%;
     }
   }
 
