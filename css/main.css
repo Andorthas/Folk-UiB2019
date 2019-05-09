@@ -141,7 +141,7 @@ table {
     border-collapse: collapse;
     border: 1px solid #DDD;
     margin: 0 auto;
-    font-size: 1rem;
+    font-size: .9rem;
     margin-top: 3rem;
 }
 
@@ -340,16 +340,16 @@ footer {
     }
 
     .header-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         border: none;
         border-bottom: 1px solid black;
         border-radius: 0 0 0 0;
         height: 30px;
         width: 100%;
         padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         background-size: 1.5rem;
         background-position: 80%;
     }
